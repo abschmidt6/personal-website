@@ -9,7 +9,7 @@ import arrow
 import andrewschmidt
 
 
-@andrewschmidt.app.route('/', methods=['GET', 'POST'])
+@andrewschmidt.app.route('/', methods=['GET'])
 def show_index():
     """Display / Route."""
     context = dict()

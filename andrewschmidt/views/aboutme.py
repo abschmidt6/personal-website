@@ -9,7 +9,7 @@ import arrow
 import andrewschmidt
 
 
-@andrewschmidt.app.route('/aboutme/', methods=['GET', 'POST'])
+@andrewschmidt.app.route('/aboutme/', methods=['GET'])
 def show_aboutme():
     """Display / Route."""
     context = dict()
