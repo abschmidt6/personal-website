@@ -1,22 +1,75 @@
+:root {
+    --myblue: #0000A0
+}
+
 div {
     margin-left: auto;
     margin-right: auto;
-    width: 620px;
-    text-align: left;
-    padding: 10px;
-
 }
 
-img {
-    width: 600px;
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 65vw;
 }
 
-h1 {
+.profpic {
+    float: left;
+    display: inline;
+    width: 50%;
+    margin: 20px;
+}
+
+.navbar {
+    font-variant: small-caps;
+}
+
+p.navbar_text {
+    text-align: center
+}
+
+h1.name {
     font-family: 'Crimson Text', serif;
     font-size: 48px;
+    font-weight: normal;
+    color: var(--myblue)
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 300;
 }
 
 p {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+    font-weight: normal;
 }
+
+p.side_text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+hr.line {
+    border-top: 1px solid black;
+}
+
+a.nav:link, a.nav:visited {
+    color: black;
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 5px 20px;
+}
+a.nav:hover, a.nav:active {
+    color: white;
+    background-color: var(--myblue);
+}
+
+a {
+    text-decoration: none;
+}
+
