@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Andrew B Schmidt</title>
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <a href="/"><h1 class="name">Andrew B Schmidt</h1></a>
+        </div>
+        <!------------------------------------------------------------------>
+        <hr class="line">
+        <div class="navbar">
+            <p class="navbar_text">
+                <a class="nav" href="https://www.linkedin.com/in/abschmidt6/">LinkedIn</a>
+                <a class="nav" href="/projects/">Projects</a>
+                <a class="nav" href="/photography/">Photography</a>
+                <a class="nav" href="/static/files/resume.pdf">Resume</a>
+                <a class="nav" href="/aboutme/">About Me</a>
+            </p>
+        </div>
+        <!------------------------------------------------------------------>
+        <hr class="line">
+
+        {% for dr in sorted_daterange %}
+            <div class="projdiv"><h2>{{dr}}</h2></div>
+            {% for proj in projects[dr] %}
+                <h3>{{proj.title}}</h3>
+
+                    <ul>
+                        {% for bp in proj.bullet_points %}
+                            <li>{{ bp }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    {% for link, type in proj.links.items() %}
+                        {% if type == 'video' %}
+                            <button class="collapsible">View Video</button>
+                            <div class="content">
+                                <video width=100% controls>
+                                <source src={{ link }} type="video/mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                        {% elif type == 'github' %}
+                            <form><button class="fakecollapsible" formaction="{{ link }}">View Source Code on GitHub</button></form>
+                        {% endif %}
+
+                    {% endfor %}
+
+                <p class="footer">{{proj.class}}</p>
+            {% endfor %}
+        {% endfor %}
+
+
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+    </script>
+</body>
+</html>
