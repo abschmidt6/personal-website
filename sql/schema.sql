@@ -20,10 +20,20 @@ CREATE TABLE project_links(
     link_type   VARCHAR(64) NOT NULL
 );
 
-CREATE TABLE photography(
-    pid         INTEGER NOT NULL PRIMARY KEY,
+CREATE TABLE photography_places(
+    pid         INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     filename    VARCHAR(64) NOT NULL,
     location    VARCHAR(128),
     description VARCHAR(1024),
-    date_taken  DATE
+    date_taken  DATE,
+    places_group VARCHAR(64)
+);
+
+CREATE TABLE photography_themes(
+    pid         INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    filename    VARCHAR(64) NOT NULL,
+    location    VARCHAR(128),
+    description VARCHAR(1024),
+    date_taken  DATE,
+    themes_group VARCHAR(64)
 );
