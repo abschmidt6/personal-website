@@ -26,14 +26,14 @@ CREATE TABLE photography_places(
     location    VARCHAR(128),
     description VARCHAR(1024),
     date_taken  DATE,
-    places_group VARCHAR(64)
+    category    VARCHAR(64)
 );
 
-CREATE TABLE photography_themes(
+CREATE TABLE photography_other(
     pid         INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     filename    VARCHAR(64) NOT NULL,
     location    VARCHAR(128),
     description VARCHAR(1024),
     date_taken  DATE,
-    themes_group VARCHAR(64)
+    category    VARCHAR(64)
 );

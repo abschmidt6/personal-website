@@ -1,6 +1,6 @@
 :root {
     --myblue: #0000A0;
-    --mygray: #DCDCDC;
+    --mygray: #e6e6e6;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -40,7 +40,7 @@ h1.name {
     font-size: 56px;
     font-weight: 300;
     font-variant: small-caps;
-    color: var(--myblue)
+    color: var(--myblue);
 }
 
 h2 {
@@ -48,7 +48,7 @@ h2 {
     font-size: 28px;
     font-weight: 300;
     font-style: italic;
-    color: #010101;
+    color: black;
     padding: 10px;
 }
 
@@ -78,6 +78,11 @@ p.navbar_text {
     font-size: 20px;
 }
 
+p.small_navbar {
+    text-align: center;
+    font-size: 16px;
+}
+
 p.footer {
     text-align: right;
     font-size: 12px;
@@ -96,7 +101,7 @@ a:link, a:visited {
     color: black;
 }
 
-a:hover, a:active {
+a.intext:hover, a.intext:active {
     color: var(--myblue);
 }
 
@@ -112,10 +117,82 @@ a.nav:hover, a.nav:active {
     background-color: var(--myblue);
 }
 
+a.current_nav:link, a.current_nav:visited {
+    color: black;
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid black;
+}
+
+a.current_nav:hover, a.current_nav:active {
+    color: white;
+    background-color: var(--myblue);
+    border: 1px solid white;
+}
+
+
 video {
     width: 100%;
     padding-top: 20px;
 }
+
+.halfbgtop {
+    background-image: url("/static/photography/bixby-bridge-big-sur-california.jpg");
+
+    height: 50%;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    margin-bottom: 20px;
+}
+
+.halfbgbottom {
+    background-image: url("/static/photography/milky_way_browns_tract_pond_2015_1.jpg");
+
+    height: 50%;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+}
+
+.gridbg {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+
+.imgtext {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    background-color: rgba(100, 100, 100, .75);
+}
+
 
 .collapsible, .fakecollapsible {
   background-color: white;
@@ -144,5 +221,40 @@ video {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: white;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 0px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 24%;
+  max-width: 24%;
+  padding: 0px 0px;
+}
+
+.column img {
+  margin-top: 5px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .column {
+    flex: 48%;
+    max-width: 48%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 

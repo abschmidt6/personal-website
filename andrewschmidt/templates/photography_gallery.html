@@ -4,6 +4,8 @@
     <title>Andrew B Schmidt</title>
     <link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600" rel="stylesheet">
+    <link href="/static/css/lightbox.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -12,23 +14,30 @@
             <a href="/"><h1 class="name">Andrew B Schmidt</h1></a>
         </div>
         <!------------------------------------------------------------------>
-        <hr class="line">
         <div class="navbar">
             <p class="navbar_text">
                 <a class="nav" href="https://www.linkedin.com/in/abschmidt6/">LinkedIn</a>
                 <a class="nav" href="/projects/">Projects</a>
-                <a class="nav" href="/photography/">Photography</a>
+                <a class="current_nav" href="/photography/">Photography</a>
                 <a class="nav" href="/static/files/resume.pdf">Resume</a>
                 <a class="nav" href="/aboutme/">About Me</a>
             </p>
         </div>
-        <!------------------------------------------------------------------>
         <hr class="line">
-        <div>
-            <p> 404: Page not found </p>
-            <p> Please try retyping the URL or using the available links </p>
+        <h2>{{ category }}</h2>
+        <div class="row">
+            {% for column in images %}
+                <div class="column">
+                    {% for img in column %}
+                        <a href={{ "/static/photography/" ~ img.filename }} data-lightbox="{{ category }}" data-title="{{ img.desc }}">
+                            <img src={{ "/static/photography/" ~ img.filename }}>
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endfor %}
         </div>
-
     </div>
+
+    <script type="text/javascript" src="/static/js/lightbox.js"></script>
 </body>
 </html>
