@@ -30,7 +30,7 @@
                 <div class="column">
                     {% for img in column %}
                         <a href={{ "/static/photography/" ~ img.filename }} data-lightbox="{{ category }}" data-title="{{ img.desc }}">
-                            <img src={{ "/static/photography/" ~ img.filename }}>
+                            <img src={{ "/static/photography/gallery/" ~ img.filename }}>
                         </a>
                     {% endfor %}
                 </div>
