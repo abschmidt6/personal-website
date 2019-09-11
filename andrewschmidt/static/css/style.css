@@ -138,30 +138,6 @@ video {
     padding-top: 20px;
 }
 
-.halfbgtop {
-    background-image: url("/static/photography/bixby-bridge-big-sur-california.jpg");
-
-    height: 50%;
-    width: 100%;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: table;
-    margin-bottom: 20px;
-}
-
-.halfbgbottom {
-    background-image: url("/static/photography/milky_way_browns_tract_pond_2015_1.jpg");
-
-    height: 50%;
-    width: 100%;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: table;
-}
 
 .gridbg {
     height: 100%;
