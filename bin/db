@@ -42,10 +42,10 @@ case $1 in
 
   "reset")
     echo "+ rm -rf var/andrewschmidt.sqlite3 var/uploads"
-    rm -rf var/andrewschmidt.sqlite3 var/uploads
+    rm -rf var/andrewschmidt.sqlite3
 
-    echo "+ mkdir -p var/uploads"
-    mkdir -p var/uploads
+    # echo "+ mkdir -p var/uploads"
+    # mkdir -p var/uploads
 
     echo "+ sqlite3 var/andrewschmidt.sqlite3 < sql/schema.sql"
     sqlite3 var/andrewschmidt.sqlite3 < sql/schema.sql
@@ -53,8 +53,8 @@ case $1 in
     echo "+ sqlite3 var/andrewschmidt.sqlite3 < sql/data.sql"
     sqlite3 var/andrewschmidt.sqlite3 < sql/data.sql
 
-    echo "+ cp sql/uploads/* var/uploads/"
-    cp sql/uploads/* var/uploads/
+    # echo "+ cp sql/uploads/* var/uploads/"
+    # cp sql/uploads/* var/uploads/
     ;;
 
 
