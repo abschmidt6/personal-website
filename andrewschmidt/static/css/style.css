@@ -101,8 +101,13 @@ a:link, a:visited {
     color: black;
 }
 
+a.intext:link, a.intext:visited {
+   text-decoration: underline;
+}
+
 a.intext:hover, a.intext:active {
-    color: var(--myblue);
+    color: white;
+    background-color: var(--myblue);
 }
 
 a.nav:link, a.nav:visited {
