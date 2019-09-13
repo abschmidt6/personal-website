@@ -105,7 +105,7 @@ def show_photography_categories(category):
                 })
 
         context['videos'] = videos
-        return flask.render_template("video_gallery.html", **context)
+        return flask.render_template("404.html", **context)
 
     elif category == "astro":
         query = "SELECT * FROM photography_other WHERE category = 'Astro';"
