@@ -22,7 +22,7 @@ setup(
         'pydocstyle==3.0.0',
         'pylint==2.2.2',
         'pytest==4.1.1',
-        'requests==2.21.0',
+        'requests==2.31.0',
         'selenium==3.141.0',
         'sh==1.12.14',
     ],
